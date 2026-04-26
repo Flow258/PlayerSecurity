@@ -1,0 +1,21 @@
+# Maven / Gradle
+target/
+build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Logs
+logs/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Compiled plugin
+*.jar
+
+# Environment / secrets
+.env
+config.yml

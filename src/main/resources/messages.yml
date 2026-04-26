@@ -1,0 +1,127 @@
+#         Developed by BlackArchive
+#
+# ======================================================
+#   PLAYER SECURITY - MESSAGES
+#   Edit all plugin messages here.
+#   Uses MiniMessage format: https://docs.advntr.dev/minimessage
+# ======================================================
+
+MESSAGES:
+
+  # ── General ──────────────────────────────────────────────────────────────
+  NO_PERMISSION: '<red>✖ <gray>You do not have permission to do that.'
+  PLAYER_NOT_FOUND: '<red>✖ <gray>Player not found: <white>{player}'
+  CONSOLE_ONLY: '<red>✖ <gray>This command can only be run from console.'
+  RELOAD_SUCCESS: '<green>✔ <gray>Configuration reloaded successfully.'
+
+  # ── VPN Detection ────────────────────────────────────────────────────────
+  VPN:
+    KICK: |
+      <red><bold>Connection Refused</bold></red>
+
+      <gray>VPN / Proxy connections are not permitted.
+      <gray>Please disable your VPN and try again.
+
+      <white>Appeal: <color:#FFC976>blackarchive.dev/appeal</color>
+    ALERT: '<yellow>⚠ <white>{player} <gray>was blocked for VPN/Proxy. <dark_gray>IP: <white>{ip}'
+    CHECK_FAILED: '<yellow>⚠ <gray>VPN check failed for <white>{player}<gray>. Allowed through (API error).'
+
+  # ── Join Security ─────────────────────────────────────────────────────────
+  JOIN:
+    IP_LIMIT_KICK: |
+      <red><bold>Security Check Failed</bold></red>
+
+      <gray>Too many accounts are linked to your IP address.
+      <gray>Maximum allowed: <white>{max}
+
+      <white>Appeal: <color:#FFC976>blackarchive.dev/appeal</color>
+    BOT_KICK: |
+      <red><bold>Access Denied</bold></red>
+
+      <gray>Your username has been flagged by our security system.
+
+      <white>Appeal: <color:#FFC976>blackarchive.dev/appeal</color>
+    USERNAME_TOO_SHORT: |
+      <red><bold>Access Denied</bold></red>
+
+      <gray>Your username is too short to join this server.
+    ALERT_IP_LIMIT: '<yellow>⚠ <white>{player} <gray>blocked — IP <white>{ip} <gray>has <white>{count}<gray>/<white>{max} <gray>accounts.'
+    ALERT_BOT: '<yellow>⚠ <white>{player} <gray>(<white>{ip}<gray>) flagged as a potential bot.'
+
+  # ── Join Flood / Raid ─────────────────────────────────────────────────────
+  RAID:
+    KICK: |
+      <red><bold>Server Protected</bold></red>
+
+      <gray>Too many players are connecting right now.
+      <gray>Please wait a moment and try again.
+    ALERT: '<red>🚨 <white>JOIN FLOOD DETECTED! <gray><white>{count} <gray>joins in the last second. Lockdown active.'
+    LOCKDOWN_START: '<red>🔒 <white>Server lockdown activated! <gray>New joins are temporarily blocked.'
+    LOCKDOWN_END: '<green>🔓 <white>Server lockdown lifted. <gray>Joins are now allowed again.'
+
+  # ── Chat Spam ─────────────────────────────────────────────────────────────
+  CHAT:
+    SPAM_WARN: '<red>⚠ <gray>Slow down! <white>({remaining} <gray>violations before kick)'
+    MUTED: '<red>✖ <gray>You are muted for <white>{duration}s <gray>for spamming.'
+    SPAM_KICK: |
+      <red><bold>Kicked for Spamming</bold></red>
+
+      <gray>You were removed for excessive chat spam.
+    SPAM_ALERT: '<yellow>⚠ <white>{player} <gray>is spamming chat. Violations: <white>{violations}'
+    ADVERTISING_BLOCKED: '<red>✖ <gray>Advertising is not allowed on this server.'
+    ADVERTISING_ALERT: '<yellow>⚠ <white>{player} <gray>tried to advertise: <white>{message}'
+    CAPS_WARN: '<gray>Your message had too many capitals and was auto-converted.'
+
+  # ── Command Security ──────────────────────────────────────────────────────
+  COMMAND:
+    SPAM_WARN: '<red>⚠ <gray>You are executing commands too fast. Slow down!'
+    SPAM_KICK: |
+      <red><bold>Kicked</bold></red>
+
+      <gray>You were removed for command spamming.
+    SPAM_ALERT: '<yellow>⚠ <white>{player} <gray>is spamming commands.'
+    BLOCKED: '<red>✖ <gray>You do not have permission to use that command.'
+    BLOCKED_ALERT: '<yellow>⚠ <white>{player} <gray>attempted blocked command: <white>/{command}'
+
+  # ── Movement Security ──────────────────────────────────────────────────────
+  MOVEMENT:
+    FLY_WARN: '<red>⚠ <gray>Unusual movement detected. Please stop.'
+    FLY_KICK: |
+      <red><bold>Kicked</bold></red>
+
+      <gray>Unusual flight activity was detected on your account.
+    FLY_ALERT: '<yellow>⚠ <white>{player} <gray>flagged for fly hack. Air ticks: <white>{ticks}'
+    SPEED_WARN: '<red>⚠ <gray>Unusual speed detected.'
+    SPEED_KICK: |
+      <red><bold>Kicked</bold></red>
+
+      <gray>Unusual movement speed was detected on your account.
+    SPEED_ALERT: '<yellow>⚠ <white>{player} <gray>flagged for speed hack. Speed: <white>{speed} <gray>b/t'
+
+  # ── Violations ────────────────────────────────────────────────────────────
+  VIOLATIONS:
+    THRESHOLD_ALERT: '<red>🚨 <white>{player} <gray>has reached <white>{violations} <gray>total violations!'
+    CLEARED: '<green>✔ <gray>Cleared violations for <white>{player}<gray>.'
+    CLEARED_NOTIFY: '<green>✔ <gray>Your security violations have been cleared by staff.'
+    CHECK: '<gray>Violations for <white>{player}<gray>: <white>{violations}'
+
+  # ── Staff Commands ────────────────────────────────────────────────────────
+  STAFF:
+    UNBAN_SUCCESS: '<green>✔ <gray>Pardoned <white>{player} <gray>from the ban list.'
+    STATUS_HEADER: '<dark_gray>▬▬▬ <gradient:#FF7272:#FFC976>PlayerSecurity Status</gradient> <dark_gray>▬▬▬'
+    STATUS_MODULE: '  <dark_gray>» <white>{module}<gray>: {status}'
+    STATUS_ENABLED: '<green>Enabled'
+    STATUS_DISABLED: '<red>Disabled'
+    HELP_HEADER: '<dark_gray>▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+    HELP_FOOTER: '<dark_gray>▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+    HELP_TITLE: '<gradient:#FF7272:#FFC976>PlayerSecurity</gradient> <gray>Commands:'
+    HELP_RELOAD: '  <white>/{label} reload <dark_gray>- <gray>Reload config & messages'
+    HELP_STATUS: '  <white>/{label} status <dark_gray>- <gray>Show module status'
+    HELP_VIOLATIONS: '  <white>/{label} violations <player> <dark_gray>- <gray>View violation count'
+    HELP_CLEAR: '  <white>/{label} clearviolations <player> <dark_gray>- <gray>Clear violations'
+    HELP_UNBAN: '  <white>/{label} unban <player> <dark_gray>- <gray>Pardon a banned player'
+    HELP_LOCKDOWN: '  <white>/{label} lockdown <on|off> <dark_gray>- <gray>Toggle join lockdown'
+    HELP_LOOKUP: '  <white>/{label} lookup <player> <dark_gray>- <gray>Look up player security info'
+
+# DO NOT TOUCH!
+version: 1

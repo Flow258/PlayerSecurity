@@ -1,0 +1,34 @@
+name: PlayerSecurity
+version: '${project.version}'
+main: dev.blackarchive.security.PlayerSecurityPlugin
+api-version: '1.21'
+description: Player Security and Defense Protocol
+authors: [ BlackArchive ]
+website: https://blackarchive.dev
+
+commands:
+  security:
+    description: Main PlayerSecurity command
+    usage: /security <help|reload|status|unban|clearviolations>
+    aliases: [ sec, psec ]
+    permission: playersecurity.admin
+
+permissions:
+  playersecurity.admin:
+    description: Access to all PlayerSecurity commands
+    default: op
+  playersecurity.alerts:
+    description: Receive security alert messages
+    default: op
+  playersecurity.bypass:
+    description: Bypass all security checks
+    default: false
+  playersecurity.bypass.vpn:
+    description: Bypass VPN/proxy check
+    default: false
+  playersecurity.bypass.spam:
+    description: Bypass chat and command spam checks
+    default: false
+  playersecurity.bypass.movement:
+    description: Bypass movement security checks
+    default: false
